@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/2447c7c4cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <title>WordCraft</title>
+  </head>
+
+  <body>
+
+    <div class="wrapper" id="home">
+      <nav class="navbar">
+
+          <div class="brand">
+            <h2>Potencia<span>tu</span>Aprendizaje</h2>
+          </div>
+          <ul class="menu">
+            <li><a class="active" href="#home">WordCraft</a></li>
+            <!--<li><a href="#">Other</a></li>-->
+
+          </ul>
+        
+        </nav>
+      
+
+      <main class="main">
+        <h1>Juego de completar palabras</h1>
+        
+        <textarea
+        id="input-text"
+        placeholder="Escribe un texto aquí..."
+      ></textarea>
+
+      <br />
+      <label for="word-count">Palabras a adivinar:</label>
+      <input type="number" id="word-count" min="1" style="width: 60px" />
+      <br />
+        <button class="button" onclick="startGame()">Continuar</button>
+      <div class="stats">
+        <p>Restantes: <span id="remaining-count">0</span></p>
+        <p>Aciertos: <span id="correct-count">0</span></p>
+        <p>Errores: <span id="wrong-count">0</span></p>
+      </div>
+      <div id="game-container">
+        <p id="sentence"></p>
+        <input
+          type="text"
+          id="word-input"
+          placeholder="Escribe la palabra..."
+          onkeypress="handleKeyPress(event)"
+        />
+        <button class="button" id=="check-button" class="comprobar" onclick="checkWord()">Comprobar</button>
+        <p id="feedback"></p>
+        <button
+          id="restart-button"
+          class="button"
+          style="display: none"
+          onclick="restartGame()"
+        >
+          Reiniciar
+        </button>
+        <p id="final-score" style="display: none"></p>
+      </div>
+      </main>
+    
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <h5>Powered by GitHub © Version 0.1</h5>
+        </div>
+        <div class="social-network">
+          <a href="https://github.com/flaviocoulleri" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/flavio-coulleri-761a66216/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.tiktok.com/@flaviocoulleri" target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>  
+      </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
