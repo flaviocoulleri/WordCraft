@@ -53,9 +53,13 @@ function checkWord() {
   if (input === expected) {
     correctCount++;
     document.getElementById("correct-count").innerText = correctCount;
+    resultMessage.innerText = "¡Correcto!";
+    resultMessage.style.color = "green";
   } else {
     wrongCount++;
     document.getElementById("wrong-count").innerText = wrongCount;
+    resultMessage.innerText = `Incorrecto. La palabra era: "${currentWord}"`;
+    resultMessage.style.color = "red";
   }
 
   nextWord();
