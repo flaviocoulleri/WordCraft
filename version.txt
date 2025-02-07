@@ -1,2 +1,4 @@
 1.0.1 
 Add resultMessage and fix checkWord
+1.0.2
+Fix responsive height
